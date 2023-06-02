@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for Hexa in range(0, 99):
-    print(Hexa, ' = ', f'{hex(Hexa)}')
+for x in range(0, 99):
+    print('{} = {}'.format(x, hex(x)))
