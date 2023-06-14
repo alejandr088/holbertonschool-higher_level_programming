@@ -4,6 +4,7 @@
 author: alejandr088
 """
 
+
 class Square:
     """
     Defined an empty Square class.

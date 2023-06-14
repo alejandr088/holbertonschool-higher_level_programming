@@ -4,6 +4,7 @@
 author: alejandr088
 """
 
+
 class Square():
     """
     A Square represented with a size.
@@ -19,6 +20,7 @@ class Square():
             TypeError: _description_
             ValueError: _description_
         """
+        self.__size = size
 
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
@@ -26,4 +28,5 @@ class Square():
         if size < 0:
             raise ValueError('size must be >= 0')
 
-        self._Square__size = size
+        self.__size = size
+
