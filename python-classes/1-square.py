@@ -5,7 +5,7 @@ author: alejandr088
 """
 
 
-class Square():
+class Square:
     """
     A Square represented with a size.
     """
@@ -14,4 +14,4 @@ class Square():
         """
         Initialized an empty Square with a priv size.
         """
-        self._square__size = size
+        self.__size = size
