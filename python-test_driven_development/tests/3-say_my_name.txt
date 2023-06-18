@@ -1,0 +1,35 @@
+Module that provides say_my_name function
+~~~~~~~~~~~~~~~~~~~~~~~~
+Prototype: def say_my_name(first_name, last_name=""):
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+First import function, (first line) then test:
+
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name('John', 'Rick')
+My name is John Rick
+>>> say_my_name('John')
+My name is John 
+>>> say_my_name('John', 7)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-test_driven_development/3-say_my_name.py", line 17, in say_my_name
+    raise TypeError('last_name must be a string')
+TypeError: last_name must be a string
+>>> say_my_name(25, 'Rick')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-test_driven_development/3-say_my_name.py", line 14, in say_my_name
+    raise TypeError('first_name must be a string')
+TypeError: first_name must be a string
+>>> say_my_name()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+>>> say_my_name(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-test_driven_development/3-say_my_name.py", line 14, in say_my_name
+    raise TypeError('first_name must be a string')
+TypeError: first_name must be a string
