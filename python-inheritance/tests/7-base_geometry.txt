@@ -1,0 +1,62 @@
+Module that provides base_geometry function
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+First import function, (first line) then test:
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> base = BaseGeometry()
+>>> base.integer_validator('hi', 1)
+>>> base.integer_validator('bye', 2)
+>>> base.integer_validator('welcome', 'not an int')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 14, in integer_validator
+    raise TypeError(f'{name} must be an integer')
+TypeError: welcome must be an integer
+>>> base.integer_validator('', 2)
+>>> base.integer_validator('', -1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 16, in integer_validator
+    raise ValueError(f'{name} must be greater than 0')
+ValueError:  must be greater than 0
+>>> base.integer_validator('z', (1,))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 14, in integer_validator
+    raise TypeError(f'{name} must be an integer')
+TypeError: z must be an integer
+>>> base.integer_validator('z', [1])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 14, in integer_validator
+    raise TypeError(f'{name} must be an integer')
+TypeError: z must be an integer
+>>> base.integer_validator()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> base.area()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 9, in area
+    raise Exception('area() is not implemented')
+Exception: area() is not implemented
+>>> base.integer_validator('checkerout')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> base.integer_validator('z', 25.6)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 14, in integer_validator
+    raise TypeError(f'{name} must be an integer')
+TypeError: z must be an integer
+>>> base.integer_validator('z', None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 14, in integer_validator
+    raise TypeError(f'{name} must be an integer')
+TypeError: z must be an integer
