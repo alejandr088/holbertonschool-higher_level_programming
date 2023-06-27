@@ -109,5 +109,5 @@ class Rectangle(Base):
             except IndexError:
                 pass
         else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+            for k, v in kwargs.items():
+                setattr(self, k, v)
