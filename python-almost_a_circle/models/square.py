@@ -30,7 +30,7 @@ class Square(Rectangle):
         setter method for size attr
         """
         self.width = value
-        self.height = value
+        self.height = self.width
 
     def __str__(self):
         """
