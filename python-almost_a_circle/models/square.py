@@ -38,3 +38,20 @@ class Square(Rectangle):
         """
         return f'[Square] ({self.id}) \
 {self.x}/{self.y} - {self.width}'
+
+    def update(self, *args, **kwargs):
+        """
+        funct that order the args
+        """
+        if args and len(args) != 0:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except IndexError:
+                pass
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
