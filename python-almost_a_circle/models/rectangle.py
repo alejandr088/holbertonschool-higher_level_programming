@@ -17,10 +17,10 @@ class Rectangle(Base):
         """
 
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -34,7 +34,13 @@ class Rectangle(Base):
         """
         Setter method for width attr
         """
-        self.__width = value
+        if type(value) is int:
+            if value > 0:
+                self.__width = value
+            else:
+                raise ValueError('width must be > 0')
+        else:
+            raise TypeError('width must be an integer')
 
     @property
     def height(self):
@@ -48,7 +54,13 @@ class Rectangle(Base):
         """
         Setter method for the height attr
         """
-        self.__height = value
+        if type(value) is int:
+            if value > 0:
+                self.__height = value
+            else:
+                raise ValueError('height must be > 0')
+        else:
+            raise TypeError('height must be an integer')
 
     @property
     def x(self):
@@ -62,7 +74,13 @@ class Rectangle(Base):
         """
         Setter method for the x attr
         """
-        self.__x = value
+        if type(value) is int:
+            if value >= 0:
+                self.__x = value
+            else:
+                raise ValueError('x must be >= 0')
+        else:
+            raise TypeError('x must be an integer')
 
     @property
     def y(self):
@@ -76,4 +94,10 @@ class Rectangle(Base):
         """
         Setter method for the y attr
         """
-        self.__y = value
+        if type(value) is int:
+            if value >= 0:
+                self.__y = value
+            else:
+                raise ValueError('y must be >= 0')
+        else:
+            raise TypeError('y must be an integer')
