@@ -58,7 +58,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """
-        function that return a dict rep of triang
+        function that return a dict rep
         """
         return {
             'id': self.id,
