@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """author: alejandr088"""
 import unittest
 from models.square import Square
