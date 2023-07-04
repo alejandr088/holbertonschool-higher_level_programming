@@ -8,7 +8,8 @@ class TestBase(unittest.TestCase):
 
     def test_to_json_string_non_empty_list(self):
         dictionaries = [{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}]
-        expected_json = '[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]'
+        expected_json = '[{"id": 1, "name": "John"},\
+        {"id": 2, "name": "Jane"}]'
         self.assertEqual(Base.to_json_string(dictionaries), expected_json)
 
     def test_save_to_file_none(self):
@@ -28,6 +29,7 @@ class TestBase(unittest.TestCase):
         json_string = '[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]'
         expected_list = [{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}]
         self.assertEqual(Base.from_json_string(json_string), expected_list)
+
 
 if __name__ == '__main__':
     unittest.main()
