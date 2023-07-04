@@ -1,8 +1,10 @@
+"""author: alejandr088"""
 import unittest
 from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    """test base class"""
     def test_to_json_string_empty_list(self):
         self.assertEqual(Base.to_json_string([]), '[]')
 

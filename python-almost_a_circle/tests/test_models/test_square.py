@@ -1,8 +1,10 @@
+"""author: alejandr088"""
 import unittest
 from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
+    """test square class"""
     def test_size(self):
         square = Square(2)
         self.assertEqual(square.size, 2)

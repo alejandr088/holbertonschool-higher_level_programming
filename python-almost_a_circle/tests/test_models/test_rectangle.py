@@ -1,8 +1,10 @@
+"""author: alejandr088"""
 import unittest
 from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
+    """test rectangle class"""
     def test_area(self):
         rectangle = Rectangle(3, 4)
         self.assertEqual(rectangle.area(), 12)
